@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/votos")
-public class VotoResource {
+public class VotoController {
 
     private final VotoService votoService;
 
     @Autowired
-    public VotoResource(VotoService votoService) {
+    public VotoController(VotoService votoService) {
         this.votoService = votoService;
     }
 

@@ -17,12 +17,12 @@ import static br.com.desafio.votacaoapi.domain.mapper.PautaMapper.toDto;
 
 @RestController
 @RequestMapping("/pautas")
-public class PautaResource {
+public class PautaController {
 
     private final PautaService pautaService;
 
     @Autowired
-    public PautaResource(PautaService pautaService) {
+    public PautaController(PautaService pautaService) {
         this.pautaService = pautaService;
     }
 

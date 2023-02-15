@@ -1,8 +1,7 @@
-package br.com.desafio.votacaoapi.resource;
+package br.com.desafio.votacaoapi.controller;
 
 import br.com.desafio.votacaoapi.domain.Pauta;
 import br.com.desafio.votacaoapi.service.PautaService;
-import br.com.desafio.votacaoapi.controller.PautaResource;
 import br.com.desafio.votacaoapi.domain.dto.SessaoDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -22,18 +21,18 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.standaloneSetup;
 import static org.mockito.ArgumentMatchers.any;
 
-@WebMvcTest(controllers = PautaResource.class)
-public class PautaResourceTests {
+@WebMvcTest(controllers = PautaController.class)
+public class PautaControllerTests {
 
     @Autowired
-    private PautaResource pautaResource;
+    private PautaController pautaController;
 
     @MockBean
     private PautaService pautaService;
 
     @BeforeEach
     public void setUp() {
-        standaloneSetup(this.pautaResource);
+        standaloneSetup(this.pautaController);
     }
 
     @Test

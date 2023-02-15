@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/resultados")
-public class ResultadoResource {
+public class ResultadoController {
 
     private final ResultadoService resultadoService;
 
     @Autowired
-    public ResultadoResource(ResultadoService resultadoService) {
+    public ResultadoController(ResultadoService resultadoService) {
         this.resultadoService = resultadoService;
     }
 

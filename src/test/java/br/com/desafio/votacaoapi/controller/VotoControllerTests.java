@@ -1,8 +1,7 @@
-package br.com.desafio.votacaoapi.resource;
+package br.com.desafio.votacaoapi.controller;
 
 import br.com.desafio.votacaoapi.domain.Voto;
 import br.com.desafio.votacaoapi.service.VotoService;
-import br.com.desafio.votacaoapi.controller.VotoResource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,18 +18,18 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.standaloneSetup;
 import static org.mockito.ArgumentMatchers.any;
 
-@WebMvcTest(controllers = VotoResource.class)
-public class VotoResourceTests {
+@WebMvcTest(controllers = VotoController.class)
+public class VotoControllerTests {
 
     @Autowired
-    private VotoResource votoResource;
+    private VotoController votoController;
 
     @MockBean
     private VotoService votoService;
 
     @BeforeEach
     public void setUp() {
-        standaloneSetup(votoResource);
+        standaloneSetup(votoController);
     }
 
     @Test
